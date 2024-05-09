@@ -22,7 +22,11 @@ function printMessage(message) {
 printMessage("Welcome to JavaScript functions!");
 printMessage("Functions are awesome!");
 
-
+function greetPerson(name) {
+  console.log("Hello, " + name + "!");
+}
+greetPerson("Alice"); // Output: Hello, Alice!
+greetPerson("Bob");   // Output: Hello, Bob!
 
 
 
@@ -40,7 +44,11 @@ console.log("Sum 1:", sum1); // Output: 8
 console.log("Sum 2:", sum2); // Output: 8
 
 
-
+function calculateTriangleArea(base, height) {
+    return 0.5 * base * height;
+  }
+  console.log(calculateTriangleArea(4, 3));   // Output: 6
+  console.log(calculateTriangleArea(5, 8));   // Output: 20
 
 
 
@@ -66,22 +74,26 @@ function divide(num1, num2) {
   }
 }
 
+
+
 // Calling the function with different arguments
 let output1 = divide(10, 2);
 let output2 = divide(5, 0);
 console.log("output 1:", output1); // Output: 5
 console.log("output 2:", output2); // Output: "Cannot divide by zero!"
 
-// Function to calculate the power of a number
-function power(base, exponent) {
-  return Math.pow(base, exponent);
-}
-
-// Calling the function with different arguments
-let result1 = power(2, 3);
-let result2 = power(10, 2);
-console.log("Result 1:", result1); // Output: 8
-console.log("Result 2:", result2); // Output: 100
+function checkNumberSign(num) {
+    if (num > 0) {
+      return "Positive";
+    } else if (num < 0) {
+      return "Negative";
+    } else {
+      return "Zero";
+    }
+  }
+  console.log(checkNumberSign(5));   // Output: Positive
+  console.log(checkNumberSign(-2));  // Output: Negative
+  console.log(checkNumberSign(0));   // Output: Zero
 
 // Function to calculate the average of numbers in an array
 function average(numbers) {
